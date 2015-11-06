@@ -1,6 +1,6 @@
 build-package: build-container
 	mkdir -p ${PWD}/artifacts
-	docker run -i -v ${PWD}/artifacts:/build -t android-sdk-debian-package
+	docker run -v ${PWD}/artifacts:/build -t android-sdk-debian-package
 
 build-container:
 	docker build -t android-sdk-debian-package .
