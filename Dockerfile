@@ -1,4 +1,5 @@
 FROM debian:jessie
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get install -y wget openjdk-7-jre-headless expect build-essential devscripts debhelper
@@ -9,4 +10,4 @@ ADD update.sh /usr/local/bin/update-android-sdk
 ADD build-deb.sh /usr/local/bin/build-deb
 ADD control /build/control
 RUN chmod +x /usr/local/bin/*
-CMD /usr/local/bin/update-android-sdk
+CMD /usr/local/bin/update-android-sdk && /usr/local/bin/build-deb

@@ -3,7 +3,7 @@ cd /usr/lib/android-sdk/build-tools
 VERSION=$(ls | sort | tail -n1)
 mkdir -p /build/android-sdk-$VERSION/usr/lib/android-sdk
 cd /build/android-sdk-$VERSION/usr/lib/android-sdk
-cp -alr /usr/lib/android-sdk/* .
+cp -pr /usr/lib/android-sdk/* .
 chown root:root . -R
 cd /build/android-sdk-$VERSION
 mkdir DEBIAN
