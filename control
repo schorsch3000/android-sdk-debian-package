@@ -1,0 +1,6 @@
+Package: android-sdk
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: John Doe <john@doe>
+Description: a minimal android sdk collection to build cordova apps
