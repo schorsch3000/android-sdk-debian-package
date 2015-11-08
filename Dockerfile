@@ -10,4 +10,5 @@ ADD update.sh /usr/local/bin/update-android-sdk
 ADD build-deb.sh /usr/local/bin/build-deb
 ADD control /build/control
 RUN chmod +x /usr/local/bin/*
+RUN /usr/local/bin/update-android-sdk
 CMD /usr/local/bin/update-android-sdk && /usr/local/bin/build-deb
