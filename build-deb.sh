@@ -12,7 +12,7 @@ echo "Version: $VERSION" >>DEBIAN/control
 cd /build/android-sdk-$VERSION
 mkdir -p etc/profile.d
 echo 'export ANDROID_HOME="/usr/lib/android-sdk"' > etc/profile.d/android.sh
-echo 'export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools' >> etc/profile.d/android.sh
+echo 'export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"' >> etc/profile.d/android.sh
 cd /build
 dpkg-deb -v --build android-sdk-$VERSION
 mv *.deb /artifacts
